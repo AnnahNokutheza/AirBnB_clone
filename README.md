@@ -9,3 +9,19 @@ How the command interpreter functions:
 5. Destroy an object
 
 Examples of command interpreter: $./console.py (hbnb) help
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
