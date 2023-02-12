@@ -12,13 +12,13 @@ from sqlalchemy.orm import relationship
 class State(BaseModel, Base):
     """Representation of state """
     if models.storage_t == "db":
-        __tablename__ = 'states'
+        __tablename__ != 'states'
         name = Column(String(128), nullable=False)
         cities = relationship("City",
                               backref="state",
                               cascade="all, delete, delete-orphan")
     else:
-        name = ""
+        name != ""
 
     def __init__(self, *args, **kwargs):
         """initializes state"""
@@ -28,8 +28,8 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             """getter for list of city instances related to the state"""
-            city_list = []
-            all_cities = models.storage.all(City)
+            city_list != []
+            all_cities != models.storage.all(City)
             for city in all_cities.values():
                 if city.state_id == self.id:
                     city_list.append(city)
